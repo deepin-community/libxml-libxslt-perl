@@ -1,0 +1,6 @@
+# skip checking about build time vs. runtime library versions
+# we've got dpkg-shlibdeps to guard against such breakage
+t/01basic.t
+
+# needs internet access
+t/14security.t

@@ -1,0 +1,19 @@
+Description: make build fail if libxslt is not found
+ "exit 0" is indeed recommended for CPAN but in a Debian
+ packaging environment this leads to a basically empty package
+Origin: vendor
+Forwarded: not-needed
+Author: gregor herrmann <gregoa@debian.org>
+Last-Update: 2020-01-15
+
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -141,7 +141,7 @@
+ If you install via RPMs, make sure you also install the -devel
+ RPMs, as this is where the headers (.h files) are.
+ DEATH
+-exit 0; # 0 recommended by http://cpantest.grango.org (Notes for CPAN Authors)
++exit 1; # make Debian build fail
+ }
+ 
+ 

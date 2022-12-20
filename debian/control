@@ -1,0 +1,32 @@
+Source: libxml-libxslt-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Damyan Ivanov <dmn@debian.org>,
+           Florian Schlichting <fsfs@debian.org>,
+           Nick Morrott <knowledgejunkie@gmail.com>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               libxml-libxml-perl <!nocheck>,
+               libxslt1-dev,
+               perl-xs-dev,
+               perl:native,
+               pkg-config
+Standards-Version: 4.4.1
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libxml-libxslt-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libxml-libxslt-perl.git
+Homepage: https://metacpan.org/release/XML-LibXSLT
+
+Package: libxml-libxslt-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+         libxml-libxml-perl
+Description: Perl interface to the GNOME libxslt library
+ XML::LibXSLT is an XSLT Perl module, based on the GNOME libxslt library,
+ which is a fast and XSLT 1.0 compliant XSLT engine.
+ .
+ XSLT is an XML-based language used for XML transformations. For more
+ information see http://www.w3.org/TR/xslt.
